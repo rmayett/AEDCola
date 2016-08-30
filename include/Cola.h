@@ -1,8 +1,10 @@
-#include "Nodo.h"//Se reciclo la clase nodo del programa de lista
+/*Rodrigo Mayett Guzman
+Se reciclo la clase nodo del programa de lista */
+#include "Nodo.h"
 
 class Cola
 {
-public://constructores de la clase
+public://constructores de la clase y atributos
 	Nodo* H;
 	Nodo* T;	
 	Cola();

@@ -1,17 +1,19 @@
+/*Rodrigo Mayett Guzman
+Define los metodos de la cola */
 #include "Cola.h"
 
 Cola::Cola(){//crea una cola vacia
 	this->H=NULL;
 	this->T=NULL;
 }
-
-bool Cola::ColaVacia(){//verifica si la cola esta vacia
+//verifica si la cola esta vacia
+bool Cola::ColaVacia(){
 	if (this->H == NULL && this->T == NULL)
 		return true;
 	return false;
 }
-
-void Cola::Encolar(int Dato){//agrega un nodo a la cola
+//agrega un nodo a la cola
+void Cola::Encolar(int Dato){
 	Nodo * aux = new Nodo(Dato);
 	if (!ColaVacia())
 	{
@@ -23,8 +25,8 @@ void Cola::Encolar(int Dato){//agrega un nodo a la cola
 		this->H=aux;
 		this->T=aux;
 	}
-}
-int Cola::Descolar(){//libera al primer nodo de la cola
+}//libera al primer nodo de la cola
+int Cola::Descolar(){
 	if (!ColaVacia())
 	{
 		int Dato =this->H->getDato();	
@@ -39,12 +41,13 @@ int Cola::Descolar(){//libera al primer nodo de la cola
 		std::cout<<"La lista esta vacia"<<std::endl;		
 	}
 }
-void Cola::VaciarCola(){//Deja la cola vacia
+//Deja la cola vacia haciendo las referencias null
+void Cola::VaciarCola(){
 	this->H=NULL;
 	this->T=NULL;
 }
-
-void Cola::Show(){//muestra los elementos de la cola
+//muestra los elementos de la cola 
+void Cola::Show(){
 	Nodo* aux = this->H;
 	while(aux!=NULL)
 	{
